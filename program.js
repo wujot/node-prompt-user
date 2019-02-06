@@ -9,16 +9,16 @@ process.stdin.on('readable', function() {
     if (input !== null) {
 	    var instruction = input.toString().trim();
 	    switch (instruction) {
-			case '/exit':
-		    	process.stdout.write('Quitting app!\n');
-	        	process.exit();
-		    	break;
-		    case 'version':
-		    	console.log(process.env);
-		    	break;
-		  	default:
-		    	process.stderr.write('Wrong instruction!\n');
-		    	break;
+		case '/exit':
+		    process.stdout.write('Quitting app!\n');
+	            process.exit();
+		    break;
+		case 'version':
+		    console.log(process.env);
+		    break;
+		default:
+		    process.stderr.write('Wrong instruction!\n');
+		    break;
 		}
 	}
 });
