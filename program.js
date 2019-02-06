@@ -13,7 +13,7 @@ process.stdin.on('readable', function() {
 		    	process.stdout.write('Quitting app!\n');
 	        	process.exit();
 		    	break;
-		    case 'version':
+		   	case 'version':
 		    	console.log(process.env);
 		    	break;
 		  	default:
